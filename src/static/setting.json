@@ -1,0 +1,3 @@
+{
+    "ConnectionString":"Server=.;Database=TestProjectDB;Trusted_Connection=True;"
+}

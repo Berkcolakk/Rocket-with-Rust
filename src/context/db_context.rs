@@ -1,6 +1,6 @@
-#[path = "../db_/connection_string.rs"]
-mod connection_string;
+#[path = "../get_json_value/get_static_json_value.rs"]
+mod json_value;
 
-pub fn test_print() -> &'static str {
-    return connection_string::CONNECTION_STRING;
+pub fn test_print()  {
+     json_value::get_static_json_value();
 }
