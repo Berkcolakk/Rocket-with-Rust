@@ -1,3 +1,4 @@
 {
-    "ConnectionString":"Server=.;Database=TestProjectDB;Trusted_Connection=True;"
+    "DatabaseURI":"mongodb://localhost:27017/",
+    "DatabaseName":"MyDB"
 }

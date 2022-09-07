@@ -11,14 +11,14 @@ use std::io::Read;
 //     connection_string: String,
 // }
 
-pub fn get_static_json_value() {
+pub fn get_static_json_value((&sectionName): (str)) {
     let mut file = File::open("static/setting.json").expect("File not found.");
     let mut buffer = String::new();
     file.read_to_string(&mut buffer)
         .expect("Error while reading file");
     let settings: Result<JsonValue, serde_json::Error> = serde_json::from_str(&buffer);
     if settings.is_ok() {
-        let p: JsonValue = settings.expect("msg");
-        println!("{}", p);
+        let p: JsonValue = settings.expect(sectionName);
+        return &p;
     }
 }
